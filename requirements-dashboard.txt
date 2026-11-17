@@ -1,0 +1,11 @@
+
+# Data manipulation
+pandas==2.3.3
+numpy==2.2.6
+
+# Dashboard
+streamlit==1.65.0
+plotly
+
+# API communication
+requests
