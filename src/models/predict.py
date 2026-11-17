@@ -311,9 +311,18 @@ def predict_churn(
             )
 
     # 13. Generate predictions
+    if set(classifier.classes_) != {0, 1}:
+        raise ValueError(
+            "The classifier must be fitted with binary classes 0 and 1."
+        )
+
+    churn_class_index = np.flatnonzero(
+        classifier.classes_ == 1
+    )[0]
+
     churn_probability = classifier.predict_proba(
         preprocessor.transform(customer_data)
-    )[:, 1]
+    )[:, churn_class_index]
 
     churn_prediction = (
         churn_probability >= threshold
