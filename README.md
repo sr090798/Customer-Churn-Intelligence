@@ -2,6 +2,22 @@
 
 An end-to-end machine learning application developed to predict customer churn probability and support data-driven customer retention decisions.
 
+## Table of Contents
+
+1. [Project Overview](#1-project-overview)
+2. [System Architecture](#2-system-architecture)
+3. [Technology Stack](#3-technology-stack)
+4. [Dataset](#4-dataset)
+5. [Model Development](#5-model-development)
+6. [Model Evaluation](#6-model-evaluation)
+7. [Project Structure](#7-project-structure)
+8. [Local Setup and Installation](#8-local-setup-and-installation)
+9. [Docker Deployment](#9-docker-deployment)
+10. [API Documentation](#10-api-documentation)
+11. [Dashboard Features](#11-dashboard-features)
+12. [Limitations and Future Improvements](#12-limitations-and-future-improvements)
+13. [Application Screenshots](#13-application-screenshots)
+
 ## 1. Project Overview
 
 The project began with **Logistic Regression as a baseline classification model**, establishing an initial benchmark for predicting customer churn. We subsequently explored tree-based ensemble methods, including Random Forest, to improve predictive performance and identify a more effective model for detecting customers at risk of churning.
@@ -194,7 +210,7 @@ The following results represent their mean cross-validation performance:
 | F1-score | 61.90% | 64.56% |
 | ROC-AUC | 85.65% | 86.02% |
 
-Although Logistic Regression achieved higher accuracy and precision, the tuned Random Forest demonstrated substantially higher recall and a better F1-score.
+Although Logistic Regression achieved higher accuracy and precision, the tuned Random Forest demonstrated substantially higher recall and a better F1-score made it more suitable for identifying customers at risk of churning.
 
 Since identifying customers who are likely to churn was an important objective, greater emphasis was placed on churn detection rather than overall accuracy alone.
 
@@ -895,6 +911,8 @@ Despite providing an end-to-end churn prediction workflow, the current implement
 - **Temporal Limitations:** The model does not explicitly account for changes in customer behavior over time or temporal patterns in churn.
 - **Business Context:** The classification threshold has not been optimized using actual retention campaign costs, intervention effectiveness, or business constraints.
 - **Limited Explainability:** The dashboard currently presents permutation feature importance but does not provide individual-level explanations for predictions.
+- The current API does not implement authentication.
+- The application is intended as a demonstration and portfolio project rather than a secured production deployment.
 
 ### 12.2 Future Improvements
 
